@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* 스타일 가이드 */
+:root {
+  /* 색상 */
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --sub-color: #f8afed;
+
+  /* 버튼 색상 */
+  --button-primary-color: #3fe73c;
+  --button-hover-color: #1f771e;
+  --button-active-color: #e7783c;
+
+  /* 버튼 padding */
+  --button-padding-l: 10px 20px;
+  --button-padding-m: 8px 16px;
+  --button-padding-s: 6px 10px;
+  /* 버튼은 작은 요소라서 픽셀로 해도 반응형에 큰 지장 없을 경우가 다수*/
+  /* 혹시나 큰 버튼이거나 반응형에 문제 생기면 px 말고 % 로 */
+
+  /* 글자 색상 */
+  --text-color-light: #2c3e50;
+  --text-color-dark: #ffffff;
+
+  /* 간격 */
+  --spacing-l: 32px;
+  --spacing-m: 16px;
+  --spacing-s: 8px;
+
+  /* 폰트 사이즈 */
+  --button-font-size-l: 20px;
+  --button-font-size-m: 15px;
+  --button-font-size-s: 10px;
+}

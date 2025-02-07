@@ -1,0 +1,14 @@
+@media all and (max-width: 768px) {
+    .button{
+        padding: var(--button-padding-m);
+        margin-right: var(--spacing-m);
+        font-size: var(--button-font-size-m);
+    }
+}
+@media all and (max-width: 390px) {
+    .button{
+        padding: var(--button-padding-s);
+        margin-right: var(--spacing-s);
+        font-size: var(--button-font-size-s);
+    }
+}
