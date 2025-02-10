@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자색 변경하기</title>
+    <style>
+      .colorChange {
+        color: blue;
+        font-size: 20px;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btnColor">글자색 변경</button>
+    <p class="txtP">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, earum aut quia accusantium veritatis iusto
+      ex sequi voluptatem excepturi eligendi distinctio tempora illo animi? Itaque nisi voluptas deleniti atque animi.
+    </p>
+    <button id="btnColor2">글자색 변경</button>
+    <p class="txtP2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, earum aut quia accusantium veritatis iusto
+      ex sequi voluptatem excepturi eligendi distinctio tempora illo animi? Itaque nisi voluptas deleniti atque animi.
+    </p>
+    <script>
+      //   글자 색 변경하기
+      const btnColor = document.querySelector("#btnColor");
+      const txtP = document.querySelector(".txtP");
+      console.log(btnColor);
+      console.log(txtP);
+
+      btnColor.addEventListener("click", function () {
+        // txtP.style.color = "red";
+        // 1. ↑일일이 style로 바꿔줘도 되고,
+        // 2. ↓처럼 css 에 변경사항 만들어준 후, classlist 로 class 명 갖고 와도 되고.
+        txtP.classList.toggle("colorChange");
+      });
+
+      
+      //   "랜덤으로" 글자 색 변경 하기
+      const btnColor2 = document.querySelector("#btnColor2");
+      const txtP2 = document.querySelector(".txtP2");
+
+      btnColor2.addEventListener("click", function () {
+        const colors = ["red", "blue", "green", "pink", "skyblue", "yellow", "hotpink"];
+        console.log(Math);
+        console.log(Math.random());
+        console.log(Math.floor(Math.random()));
+        // Math 객체 안에 random 속성이 있음
+        // Math.random() : 0과 1사이에서 무작위 소수를 반환하는 코드
+        // Math.floor() : 소수점 이하를 버리고 가장 가까운 정수로 내림해주는
+        console.log(colors.length);
+
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        console.log(randomIndex);
+        // 숫자 랜덤으로 찍힘
+
+        const randomColor = colors[randomIndex];
+        console.log(randomColor);
+        txtP2.style.color = randomColor;
+      });
+    </script>
+  </body>
+</html>

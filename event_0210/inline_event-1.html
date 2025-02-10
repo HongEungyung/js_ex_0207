@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline-event -태그 안에 event 넣기</title>
+    <style>
+        button{
+            border: 2px solid blue;
+        }
+        input{
+            border: 2px solid green;
+            color: green;
+            padding: 5px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="clickEvent(this)">클릭</button>
+    <!-- 여기서 this 는 button -->
+     <!-- 여기 this 없으면 아래 console.log(el) 인식못함. -->
+    <input type="text" onfocus="focusEvent(this)" onblur="blurEvent(this)">
+    <!-- 여기도 마찬가지 (this) 다 줘야 아래 console.log(el)이 인식 됨. -->
+    <script>
+        function clickEvent(el){
+            // this 를 ele 매개변수로 받은 거
+            // console.log(`매개변수 ${ele}`);
+            console.log(el);
+            el.style.border = "2px solid red"
+            console.log("click");
+        }
+        function focusEvent(el){
+            console.log("focus on");
+            console.log(el);
+            el.style.border = "2px solid orange"
+        }
+        function blurEvent(el){
+            console.log("focus off");
+            console.log(el);
+            el.style.border = "2px solid green"
+        }
+    </script>
+</body>
+</html>

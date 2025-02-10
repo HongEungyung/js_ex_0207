@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListner</title>
+</head>
+<body>
+    <button class="btn1">클릭1</button>
+    <button class="btn2">클릭2</button>
+    <script>
+        const btnEl1 = document.querySelector("button")
+        const btnEl2 = document.querySelector(".btn2")
+
+        btnEl1.onclick = function(){
+            console.log("클릭");
+        }
+        //위 아래 같은 건데 요즘은 addEventListner 많이 씀. 
+        btnEl1.addEventListener("click" , function(){
+            console.log("click");           
+        })
+        // 화살표 함수로 바꾸면?
+        btnEl1.addEventListener("click" , ()=>{
+            console.log("click2");
+        })
+
+        const clickEvent = () => {
+            console.log("click3");
+        }
+        btnEl1.addEventListener("click" , clickEvent)
+        btnEl2.addEventListener("click" , clickEvent)
+        // btnEl2 은 콘솔 click3 만 나올거임 여기서만 btnEl2 를 불렀으니까.
+    </script>
+</body>
+</html>

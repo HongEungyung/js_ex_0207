@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>addEventListner - forEach</title>
+    <style>
+        .active{
+            background-color: aqua;
+        }
+    </style>
+  </head>
+  <body>
+    <button class="btn">클릭1</button>
+    <button class="btn">클릭2</button>
+    <button class="btn">클릭3</button>
+    <button class="btn">클릭4</button>
+    <button class="btn">클릭5</button>
+    <button class="btn">클릭6</button>
+    <script>
+      const btns = document.querySelectorAll(".btn");
+    //   console.log(btns);
+      btns.forEach(function (btn) {
+        // console.log(btn);
+        btn.addEventListener("click" , function(){
+            // btn.style.backgroundColor = "red"
+            btn.classList.toggle("active")
+            // css에 active있어야 함
+        })
+      });
+    </script>
+  </body>
+</html>

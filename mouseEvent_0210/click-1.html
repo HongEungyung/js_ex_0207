@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click 이벤트 - 마우스 이벤트</title>
+</head>
+<body>
+    <button class="clickBt">클릭하세요</button>
+    <p class="displayTxt">
+        <!-- js 출력 : `안녕하세요` -->
+    </p>
+    <script>
+        // 변수에 저장
+        const clickBt = document.querySelector(".clickBt")
+        const displayTxt = document.querySelector(".displayTxt")
+        // clickBt.addEventListener("click" , function(){
+        //     console.log(clickBt); //(변수)
+        //     console.log("click"); //("text")
+        //     displayTxt.innerHTML = `안녕하세요`;
+        // })
+        clickBt.addEventListener("click" , function(event){
+            // 이벤트 는 e 나, event 로 적어주기
+            console.log(event);
+            console.log(`type : ${event.type}`); // 여기 event는 내장
+            console.log(`clientX : ${event.clientX}`);
+            console.log(`clientY : ${event.clientY}`);
+            // clientX, clientY → 브라우저 내부의 좌표
+            console.log(`pageX : ${event.pageX}`);
+            console.log(`pageY : ${event.pageY}`);
+            // pageX, pageY → 전체 문서에서의 좌표 (스크롤 영향 받음)
+            console.log(`screenX : ${event.screenX}`);
+            console.log(`screenY : ${event.screenY}`);
+            // screenX, screenY → 사용자 화면(모니터) 기준 좌표
+            console.log(event.type);
+            console.log(event.clientY);
+        })
+
+        // 더블 클릭
+        clickBt.addEventListener("dblclick" , function(event){
+            displayTxt.innerHTML = `안녕하세요`;
+        })
+    </script>
+</body>
+</html>
