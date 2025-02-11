@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error 이벤트</title>
+    <style>
+        #img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="alex.png" alt="이미지 로딩 실패" id="img">
+    <!-- 일부러 jpg 를 png 로 바꿔줌. 콘솔에서 에러 메시지 확인 위해서 -->
+    <script>
+        const img = document.getElementById("img")
+        img.addEventListener("error" , function(){
+            console.log("이미지 로딩 실패");
+            img.src = "alex.jpg"
+            // 이미지 로딩 실패 하면 이 이미지로 바꿔라.
+        })
+    </script>
+</body>
+</html>

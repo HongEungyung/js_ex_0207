@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll될 때, header 색상 변경</title>
+    <style>
+         * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .inner{
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        /* background-color: aqua; */
+      }
+      header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(121, 121, 121, 0.8);
+      }
+      .logoimg{
+        width: 50px;
+        display: none;
+        transition: all 0.5s;
+      }
+      /* 스크롤 됐을 때 변경 */
+      header.scrolled{
+        height: 80px;
+        background-color: rgba(174, 193, 255, 0.8);
+      }
+      header.scrolled .logoimg{
+        display: block;
+        opacity: 1;
+        width: 40px;
+      }
+      header.scrolled .logo_top{
+        opacity: 0;
+        display: none;
+      }
+      .page-start{
+        margin-top: 80px;
+      }
+    </style>
+</head>
+<body>
+    <!-- 상단 -->
+     <header>
+         <div class="inner">
+            <div class="logo_top">LOGO</div>
+            <img src="red_logo.svg" alt="logo" class="logoimg">
+         </div>
+     </header>
+     <section class="page-start">
+        <div class="inner">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos necessitatibus saepe corrupti unde animi omnis tempora quis ipsa nisi distinctio laudantium cumque dolore, ab architecto sapiente aliquid? Perferendis, odit saepe? Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              aut numquam maxime laborum at quae nulla iusto molestiae laboriosam. At quas cumque sit vitae. Voluptatem atque modi debitis incidunt consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem obcaecati magni aperiam eligendi, soluta facilis quas tenetur minima
+              voluptatibus ea, voluptatum saepe esse architecto. Vitae perferendis aut nulla sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse perspiciatis, perferendis, commodi dolore ad delectus architecto quas cum suscipit facilis amet! Ipsum dicta impedit eum facilis. Magni quaerat
+              eos beatae.
+            </p>
+          </div>
+     </section>
+     <script>
+        const header = document.querySelector("header")
+        const page = document.querySelector(".page-start")
+        function headerBg(){
+            // console.log(window.pageYOffset);
+             console.log(page.offsetTop);
+            //  padding 값 때문에 page.offsetTop 값이 0이 계속 나옴. 
+            // 그래서 padding-top 을 margine-top 으로 바꿔줌
+            // 값은 margine-top 과 같은 80
+             
+            // const scrolled = window.pageYOffset
+
+            const scrolled = window.pageYOffset >= page.offsetTop
+            // 스크롤 값이 80보다 크면
+            if(scrolled){
+                header.classList.add("scrolled")
+                // 헤더 scrolled 값으로 변경
+            } else {
+                header.classList.remove("scrolled")
+            }
+        }
+        window.addEventListener("scroll" , headerBg)
+     </script>
+</body>
+</html>

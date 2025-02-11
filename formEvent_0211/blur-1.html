@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blur 이벤트</title>
+    <!-- 폼 요소에 포커스를 잃었을 때 이벤트 발생 -->
+     <!-- blur = focus 의 반대 -->
+    <style>
+        #nameError{
+            color: red;
+            font-size: 12px;
+            /* display: none; */
+            /* ↑ 이거 대신 스크립트에서 esle 로 none 시킴 */
+        }
+    </style>
+</head>
+<body>
+    <h1>blur 이벤트</h1>
+    <label for="input">이름:</label>
+    <input type="text" id="input" placeholder="이름을 입력하세요.">
+    <span id="nameError">
+        <!-- js 출력 -->
+    </span>
+    <script>
+        const input = document.querySelector("#input")
+        const nameError =document.querySelector("#nameError")
+        input.addEventListener("blur" , function(){
+            const inputValue = input.value.trim()
+            // trim : 공백을 값으로 인식하지 못하게 하는 메서드
+            // (입력 필드값의 앞뒤 공백이 사라진다.)
+            // console.log(inputValue);
+            if(inputValue === ""){
+                // ↓ html <!-- js 출력 --> ←여기에 들어갈 말
+                nameError.textContent = "이름을 입력하세요."
+                nameError.style.display = "inline"
+            }else{
+                nameError.style.display = "none"
+            }
+        })
+    </script>
+</body>
+</html>

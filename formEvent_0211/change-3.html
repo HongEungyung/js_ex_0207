@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change 이벤트</title>
+    <!-- 목록이나 체크상태 등이 변경되면 이벤트 발생 -->
+</head>
+<body>
+    <h1>항목선택</h1>
+    <label for="myCheckBox">체크박스</label>
+    <input type="checkbox" name="myCheckBox" id="myCheckBox">
+    <!-- for 와 id 는 무조건 같게 하기 -->
+     <p id="status">
+        <!-- 체크가 됐는 지 안 됐는 지 상태 관리 -->
+        <!-- ↓ 이렇게 js 출력 -->
+        <!-- "체크박스에 선택이 되었습니다." -->
+     </p>
+<script>
+    const checkbox = document.querySelector("#myCheckBox")
+    const status = document.querySelector("#status")
+    checkbox.addEventListener("change" , function(){
+        if(checkbox.checked){
+            console.log(checkbox.checked);
+            // 체크 되면 console에 true 찍힘
+            status.textContent = "체크박스에 선택이 되었습니다."
+        }else{
+            status.textContent = "체크박스에 선택이 해제 되었습니다."
+        }
+    })
+</script>
+</body>
+</html>

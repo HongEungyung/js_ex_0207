@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scroll 이벤트</title>
+    <style>
+      body {
+        height: 1500px;
+      }
+      .container {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .container img {
+        width: 100%;
+        transition: all 0.5s;
+        opacity: 0;
+      }
+      .img.view {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>scroll 이벤트</h1>
+    <div class="container">
+      <img src="alex.jpg" alt="이미지" class="img" />
+    </div>
+    <script>
+      window.addEventListener("scroll", function () {
+        const img = document.querySelector(".img");
+        const imgPosition = img.getBoundingClientRect().top;
+        // getBoundingClientRect() 자바스크립트 메서드
+        // 이미지 요소의 테두리(경계box) 정보를 제공
+        // console.log(imgPosition);
+        // 스크롤 될 때, 브라우저 내에서 이미지의 X,Y위치 값을 알려줌.
+
+        const windowHeight = window.innerHeight;
+        // console.log(innerHeight);
+        // 브라우저 높이 값 알려줌
+        if (imgPosition < windowHeight && imgPosition < 0) {
+          // 이미지 위치가 top 0보다 작아지면
+          // (-마이너스 값 = 스크롤이 올라간다는 말)
+          // 이미지 나타남
+          img.classList.add("view");
+        } else {
+          img.classList.remove("view");
+        }
+      });
+    </script>
+  </body>
+</html>
