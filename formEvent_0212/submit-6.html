@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>submit 이벤트</title>
+  </head>
+  <body>
+    <h1>submit 이벤트</h1>
+    <form id="myForm">
+      <label for="name">이름:</label>
+      <input id="name" type="text" />
+      <br />
+      <label for="email">이메일:</label>
+      <input id="email" type="text" />
+      <br />
+      <button type="submit">로그인</button>
+    </form>
+    <div id="output">
+      <!-- js 출력 -->
+      <!-- <p>이름: <strong>스폰지밥</strong></p>
+         <p>이메일: <strong>spongebob@gmail.com</strong></p> -->
+    </div>
+    <script>
+      const form = document.querySelector("#myForm");
+      const output = document.querySelector("#output");
+      form.addEventListener("submit", function (event) {
+        // function 안에 (event) 또는 (e) 잊지말기!!!!!!!!
+        // 변동하는 인수값이 들어올 때 매개변수로 event 써줘야 함!!!
+
+        // alert("정보제출")
+        event.preventDefault();
+        // button 자체의 submit 효과 때문에 console 계속 사라지면
+        // preventDefault()꼭 해줘야 함.
+
+        const nameE = document.querySelector("#name");
+        const nameValue = nameE.value;
+
+        const emailE = document.querySelector("#email")
+        const emailValue = emailE.value;
+        // console.log(nameValue);
+        output.innerHTML = `
+        <p>이름: <strong>${nameValue}</strong></p>
+        <p>이메일: <strong>${emailValue}</strong></p>`    
+      });
+    </script>
+  </body>
+</html>
